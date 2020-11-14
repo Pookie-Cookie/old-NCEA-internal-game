@@ -1,0 +1,125 @@
+import ttk
+import randint
+import *
+
+Create a GUI class
+initiate variables
+    create a data attribute root and set it to Tk()
+    call on the MenuScreen class
+    run the mainloop
+
+
+create a class called MenuScreen
+initiate variables
+    create a data attribute root and set to root
+    create a data attribute frame and set to Frame with and root passed in as arguments
+    create a data attribute title and create a label that is the title with frame and text as arguments
+    create a data attribute that creates a ttk.button, pass in command=play button as argument
+    create a data attribute instructions that creates a ttk label that states the instructions of the game
+    create a data attribute that calls on the pack function
+
+    create a function that packs the button, title and instructions onto the menu screen
+        pack the title of the game
+        pack the instructions
+        pack the play button
+
+    create a function unpack function
+        use frame.destroy to destroy frame
+
+    create a function for the play button
+        call on the unpack function
+        call on the Game screen class
+
+create a class called GameScreen
+initiate variables
+    create a data attribute called root and set it to root
+    create a data attribute height and set it to the integer 600
+    create a data attribute width and set it to the integer 600
+    create a data attribute canvas and  create a Canvas and pass in root, height and width as arguments
+    create a data attribute frame and   create a ttk frame with rot as the argument
+    create a data attribute ship andset it to Ship and pass in canvas and the position of the ship on the canvas as an int
+    create a data attribute enemy and set to a blank list
+    create a data attribute     create()
+    create a data attribute quit button and     create a ttk button with frame, text("quit") and command that calls on self.quit function as arguments
+    create a data attribute pack()
+    create a data attribute loop and set to None
+    create a data attribute movement()
+    create a data attribute right and set it to None
+    create a data attribute root.bind.all and use the lambda method to bind a keypress to ship data attribute and event arguments
+    create a data attribute root.bind.all and use the lambda method to bind a keyrelease to ship data attribute and event arguments
+    create a data attribute end_game and set to False
+
+    create a function for movement
+        use a if function to check if the ship coordinates are at the border of the canvas(left and right)and check whether it is still moving or nor
+        if the ship is not at the boundary then proceed to call the move function
+
+    create a function that  creates multiple enemies
+        for every enemy in the enemy list call the move function for each of them
+        use canvas.after method to repeat this function once every 20 milliseconds
+
+    create a function call keypress
+        if the key pressed is right arrow key then set the ship x_vel to 5
+            set data attribute right to True
+        if the key pressed is left arrow key then set the x_vel of the ship to -5
+            set data attribute right to False
+
+    create a function called keyrelease
+        if keys are being released then set x_vel to 0
+
+
+    create a function called out
+        check if the coordinates of the enemy is at y = 300
+        delete the enemy from the canvas
+        delete the enemy from the list
+        print("delete enemy")
+
+    create a function called quit
+        quit the game with exit()
+
+    create a function called pack
+        pack the quit_button
+        pack the canvas
+        pack the frame
+
+    create a function called unpack
+        destroy the canvas
+        destroy the frame
+
+    create a function called create
+        create enemies on the canvas
+
+create a class called ship with self, parent and x as arguments
+initiate variables
+    create a data attribute x and set to x
+    create a data attribute y and set to int 500
+    create a data attribute x_vel and set to int 0
+    create a data attribute y_vel and set to int 0
+    create a data attribute canvas and set to parent
+    create a data attribute height and set it to int 20
+    create a data attribute width and set it to int 20
+    create a data attribute ship and set it to  create a rectangle on the canvas with x, y, width, height and background colour blue as arguments
+
+    create a function called move
+        check if the absolute value of the x_vel data attribute is greater than 0
+        move the ship by x_vel and y_vel
+
+    create a function called get_coords
+        get the coordinates of the ship
+
+create a class called enemy
+initiate variables
+    create a data attribute canvas and set it to canvas
+    create a data attribute y and set it to 0
+    create a data attribute y_vel and set it to 3
+    create a data attribute x and set it to get a random integer from the range 0, 550
+    create a data attribute height and set it to the integer 50
+    create a data attribute width and set it to the integer 50
+    create a data attribute enemy and create a rectangles with x, y, width, height and colour as arguments
+
+    create a function called move
+        move the enemy by y_vel on the canvas
+
+    create a function called get_coords
+        get the coordinates of the enemy(ies)
+
+run the program

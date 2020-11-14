@@ -1,0 +1,31 @@
+import * and ttk and randint
+
+create a class GUI
+    pack game and menu screen
+    give button commands and pack them too
+
+Create a Menu Screen class
+    make a button to call on the Game screen class
+    make a button to destroy frame and has command to call on the GameScreen class
+    create a label to display the instructions of the game
+
+Create a Game screem class
+    create canvas objects for the player's object and the enemy
+    create a function to determine if the game is over, ie if a collision between the player and enemy has occured.
+    create a function for the movement of objects, inside this movement function should also be where the game checks if the player is moving outside of the canvas and if so then stop it
+    create a function for key press and key release to determine which direction to move and how much.
+    create a function that checks if the enemy in the enemy list has moved outside of the screen and thus delete it from the screen(canvas) and the list.
+    create a function that a quit button can call to quit out of the game
+Create a Ship class(you)
+    get speed
+    get coords
+    def overlap
+
+Create a enemies class
+    get speed
+    get coords
+    create a function that checks if the x_vel of the ship is bigger than 0 if so then move it by that much with a refresh rate.(window.after
+
+GUI()
+
+run the game
